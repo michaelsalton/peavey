@@ -7,42 +7,45 @@
 
 import SwiftUI
 
+struct ImageOverlay: View{
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .fill(.green)
+                .frame(width: 100, height: 100)
+                .position(x: 500, y: 350)
+        }
+    }
+}
+
+func drawBox(width: CGFloat, height: CGFloat, x: CGFloat, y: CGFloat) -> Rectangle {
+    var output: Rectangle {
+        Rectangle()
+            .fill(.blue)
+            .frame(width: width, height: height) as! Rectangle
+            
+    }
+    return output
+}
+
 struct ContentView: View {
     
-    @State private var isZoomed = false
     private var listOfBins = binList
     @State var searchText = ""
     
     var body: some View {
         
-        // SEARCH FOR BIN
+        // MAP
+        VStack {
+            Image("map")
+                .resizable()
+                .scaledToFit()
+                .position(x: 195, y: 175)
+                .overlay(ImageOverlay(), alignment: .bottomTrailing)
+            Spacer()
+        }
+        
         NavigationView {
-            
-            // MAP
-            VStack {
-                Image("map")
-                    .resizable()
-                    .scaledToFit()
-                    .position(x: 195, y: 175)
-                    .overlay(ImageOverlay(), alignment: .bottomTrailing)
-                Spacer()
-            }
-            
-            struct ImageOverlay: View{
-                // DRAW BIN LOCATION FUNCTION
-                func drawBox(width: CGFloat, height: CGFloat, x: CGFloat, y: CGFloat) -> ZStack<Rectangle> {
-                        var output: ZStack<Rectangle> {
-                            ZStack {
-                            Rectangle()
-                                .fill(.red)
-                                .frame(width: width, height: height)
-                                .position(x: x, y: y) as! Rectangle
-                            }
-                    }
-                    return output
-                }
-            }
-            
             List {
                 ForEach(bins, id: \.self) { bin in
                     HStack {
@@ -60,11 +63,12 @@ struct ContentView: View {
             
             // CALULATE BOX SIZE AND LOCATION
             if searchText.elementsEqual("AP1") {
-                drawBox(width: 50, height: 50, x: 50, y: 50)
+                
             }
         }
     }
-            
+         
+    // DISPLAY LIST OF BINS AND SEARCH BAR
     var bins: [String] {
         let upBins = listOfBins.map {$0.uppercased()}
         return searchText == "" ? upBins : upBins.filter{
