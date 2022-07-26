@@ -7,24 +7,35 @@
 
 import SwiftUI
 
+struct ImageOverlay: View {
+    
+    var body: some View {
+        ZStack {
+            Rectangle()
+                .fill(.green)
+                .frame(width: 3, height: 132)
+                .position(x: 332, y: 184)
+        }
+            
+    }
+}
+
 struct ContentView: View {
     
-    
     @State private var isZoomed = false
-    
     private var listOfBins = binList
     @State var searchText = ""
     
     var body: some View {
-        Image("map")
-            .resizable()
-            .aspectRatio(contentMode: isZoomed ? .fill : .fit).ignoresSafeArea(.all)
-            .onTapGesture {
-                withAnimation {
-                    isZoomed.toggle()
-                }
-            }
-            .scaledToFit()
+        VStack {
+            Image("map")
+                .resizable()
+                .scaledToFit()
+                .position(x: 195, y: 175)
+                .overlay(ImageOverlay(), alignment: .bottomTrailing)
+            Spacer()
+        }
+        
         NavigationView {
             List {
                 ForEach(bins, id: \.self) { bin in
@@ -43,10 +54,12 @@ struct ContentView: View {
             .navigationTitle("Bins")
         }
         
-        Rectangle()
-            .fill(.green)
-            .frame(width: 200, height: 200)
+        
+        
     }
+    
+
+    
     
     
     var bins: [String] {
