@@ -13,19 +13,9 @@ struct ImageOverlay: View{
             Rectangle()
                 .fill(.green)
                 .frame(width: 100, height: 100)
-                .position(x: 500, y: 350)
+                .position(x: 200, y: 300)
         }
     }
-}
-
-func drawBox(width: CGFloat, height: CGFloat, x: CGFloat, y: CGFloat) -> Rectangle {
-    var output: Rectangle {
-        Rectangle()
-            .fill(.blue)
-            .frame(width: width, height: height) as! Rectangle
-            
-    }
-    return output
 }
 
 struct ContentView: View {
@@ -34,7 +24,6 @@ struct ContentView: View {
     @State var searchText = ""
     
     var body: some View {
-        
         // MAP
         VStack {
             Image("map")
@@ -60,14 +49,9 @@ struct ContentView: View {
             }
             .searchable(text: $searchText)
             .navigationTitle("Bins")
-            
-            // CALULATE BOX SIZE AND LOCATION
-            if searchText.elementsEqual("AP1") {
-                
-            }
         }
     }
-         
+    
     // DISPLAY LIST OF BINS AND SEARCH BAR
     var bins: [String] {
         let upBins = listOfBins.map {$0.uppercased()}
