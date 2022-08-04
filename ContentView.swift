@@ -24,11 +24,33 @@ struct ContentView: View {
                         .overlay(ZStack {
 
                             // AP
-                            if (tapText.prefix(3) == "AP1" || searchText.prefix(3) == "AP1") {
-                                AP1()
+                            
+                            if (searchText == "Hello World")
+                            {
+                                Text("Hello Commoner")
+                                    .font(.title)
+                                    .background(.black)
+                                    .foregroundColor(.white)
+                                    .frame(width: 1000, height: 1000)
+                                    .position(x: 240, y: 330)
                             }
                             
-                            else if (tapText.prefix(3) == "AP2" || searchText.prefix(3) == "AP2") {
+                            else if (tapText.prefix(3) == "AP1" || searchText.prefix(3) == "AP1") {
+                                if (tapText.prefix(5) == "AP158" || searchText.prefix(5) == "AP158") {
+                                    AP158()
+                                }
+                                //AP1()
+                            }
+                            
+                            else if (tapText.prefix(5) == "AP156" || searchText.prefix(5) == "AP156") {
+                                AP156()
+                            }
+                            
+                            else if (tapText.prefix(5) == "AP154" || searchText.prefix(5) == "AP154") {
+                                AP154()
+                            }
+                            
+                            else if (tapText.prefix(3) == "AP2") {
                                 AP2()
                                 
                             }
@@ -117,7 +139,6 @@ struct ContentView: View {
                                 
                             }
                             
-                            // TY
                             else if (tapText.prefix(2) == "EC" || searchText.prefix(2) == "EC") {
                                 EC()
                                 
@@ -133,11 +154,6 @@ struct ContentView: View {
                                 
                             }
                             
-                            else if (tapText.prefix(2) == "EF" || searchText.prefix(2) == "EF") {
-                                EF()
-                                
-                            }
-                            
                             else if (tapText.prefix(2) == "EG" || searchText.prefix(2) == "EG") {
                                 EG()
                                 
@@ -148,61 +164,196 @@ struct ContentView: View {
                                 
                             }
                             
-                            // TY
                             else if (tapText.prefix(2) == "EI" || searchText.prefix(2) == "EI") {
                                 EI()
                                 
                             }
                             
-                            else if (tapText.prefix(3) == "EJ" || searchText.prefix(3) == "EJ") {
+                            else if (tapText.prefix(2) == "EJ" || searchText.prefix(2) == "EJ") {
                                 EJ()
                                 
                             }
                             
-                            else if (tapText.prefix(3) == "EK" || searchText.prefix(3) == "EK") {
+                            else if (tapText.prefix(2) == "EK" || searchText.prefix(2) == "EK") {
                                 EK()
                                 
                             }
                             
                             // F
-                            else if (searchText.elementsEqual("FA")) { FA() }
-                            else if (searchText.elementsEqual("FB")) { FB() }
-                            else if (searchText.elementsEqual("FC")) { FC() }
-                            else if (searchText.elementsEqual("FD")) { FD() }
-                            else if (searchText.elementsEqual("FE")) { FE() }
-                            else if (searchText.elementsEqual("FF")) { FF() }
-                            else if (searchText.elementsEqual("FG")) { FG() }
-                            else if (searchText.elementsEqual("FH")) { FH() }
+                            
+                            else if (tapText.prefix(2) == "FA" || searchText.prefix(2) == "FA") {
+                                FA()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "FB" || searchText.prefix(2) == "FB") {
+                                FB()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "FC" || searchText.prefix(2) == "FC") {
+                                FC()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "FD" || searchText.prefix(2) == "FD") {
+                                FD()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "FE" || searchText.prefix(2) == "FE") {
+                                FE()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "FF" || searchText.prefix(2) == "FF") {
+                                FF()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "FG" || searchText.prefix(2) == "FG") {
+                                FG()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "FH" || searchText.prefix(2) == "FH") {
+                                FH()
+                                
+                            }
                             
                             // R, TG, TL, TM, TJ, _R (REPACK)
-                            else if (searchText.elementsEqual("RA")) { RA() }
-                            else if (searchText.elementsEqual("RB")) { RB() }
-                            else if (searchText.elementsEqual("RC")) { RC() }
-                            else if (searchText.elementsEqual("RD")) { RD() }
-                            else if (searchText.elementsEqual("RE")) { RE() }
-                            else if (searchText.elementsEqual("RF")) { RF() }
-                            else if (searchText.elementsEqual("RG")) { RG() }
-                            else if (searchText.elementsEqual("TG1")) { TG1() }
-                            else if (searchText.elementsEqual("TG2")) { TG2() }
-                            else if (searchText.elementsEqual("TG3")) { TG3() }
-                            else if (searchText.elementsEqual("TG4")) { TG4() }
-                            else if (searchText.elementsEqual("TL")) { TL() }
-                            else if (searchText.elementsEqual("TM")) { TM() }
-                            else if (searchText.elementsEqual("TK")) { TK() }
-                            else if (searchText.elementsEqual("TJ1")) { TJ1() }
-                            else if (searchText.elementsEqual("TJ2")) { TJ2() }
-                            else if (searchText.elementsEqual("TJ3")) { TJ3() }
-                            else if (searchText.elementsEqual("1R")) { ONER() }
-                            else if (searchText.elementsEqual("2R")) { TWOR() }
-                            else if (searchText.elementsEqual("3R")) { THREER() }
+                            
+                            else if (tapText.prefix(2) == "RA" || searchText.prefix(2) == "RA") {
+                                RA()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "RB" || searchText.prefix(2) == "RB") {
+                                RB()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "RC" || searchText.prefix(2) == "RC") {
+                                RC()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "RD" || searchText.prefix(2) == "RD") {
+                                RD()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "RE" || searchText.prefix(2) == "RE") {
+                                RE()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "RF" || searchText.prefix(2) == "RF") {
+                                RF()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "RG" || searchText.prefix(2) == "RG") {
+                                RG()
+                                
+                            }
+                            
+                            else if (tapText.prefix(3) == "TG1" || searchText.prefix(3) == "TG1") {
+                                TG1()
+                                
+                            }
+                            
+                            else if (tapText.prefix(3) == "TG2" || searchText.prefix(3) == "TG2") {
+                                TG2()
+                                
+                            }
+                            
+                            else if (tapText.prefix(3) == "TG3" || searchText.prefix(3) == "TG3") {
+                                TG3()
+                                
+                            }
+                            
+                            else if (tapText.prefix(3) == "TG4" || searchText.prefix(3) == "TG4") {
+                                TG4()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "TL" || searchText.prefix(2) == "TL") {
+                                TL()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "TM" || searchText.prefix(2) == "TM") {
+                                TM()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "TK" || searchText.prefix(2) == "TK") {
+                                TK()
+                                
+                            }
+                            
+                            else if (tapText.prefix(3) == "TJ1" || searchText.prefix(3) == "TJ1") {
+                                TJ1()
+                                
+                            }
+                            
+                            else if (tapText.prefix(3) == "TJ2" || searchText.prefix(3) == "TJ2") {
+                                TJ2()
+                                
+                            }
+                            
+                            else if (tapText.prefix(3) == "TJ3" || searchText.prefix(3) == "TJ3") {
+                                TJ3()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "1R" || searchText.prefix(2) == "1R") {
+                                ONER()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "2R" || searchText.prefix(2) == "2R") {
+                                TWOR()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "3R" || searchText.prefix(2) == "3R") {
+                                THREER()
+                                
+                            }
                             
                             // OTHERS
-                            else if (searchText.elementsEqual("LA")) { LA() }
-                            else if (searchText.elementsEqual("YA")) { YA() }
-                            else if (searchText.elementsEqual("E4")) { E4() }
-                            else if (searchText.elementsEqual("C4")) { C4() }
-                            else if (searchText.elementsEqual("CK")) { CK() }
-                            else if (searchText.elementsEqual("DL")) { DL() }
+                            
+                            else if (tapText.prefix(2) == "LA" || searchText.prefix(2) == "LA") {
+                                LA()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "YA" || searchText.prefix(2) == "YA") {
+                                YA()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "E4" || searchText.prefix(2) == "E4") {
+                                E4()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "C4" || searchText.prefix(2) == "C4") {
+                                C4()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "CK" || searchText.prefix(2) == "CK") {
+                                CK()
+                                
+                            }
+                            
+                            else if (tapText.prefix(2) == "DL" || searchText.prefix(2) == "DL") {
+                                DL()
+                                
+                            }
                             
                         }, alignment: .bottomTrailing)
                     Spacer()
@@ -226,11 +377,12 @@ struct ContentView: View {
                         UIApplication.shared.endEditing()
                         tapText = bin
                     }
+                    //tapText = nil
                     .padding()
                 }
             }
             .searchable(text: $searchText)
-            .navigationTitle("Bins")
+            .navigationTitle("Bin Locator")
         }
     }
     
@@ -260,6 +412,48 @@ struct ContentView: View {
                 .position(x: 339.5, y: 238)
        }
    }
+    struct AP158: View{
+       var body: some View{
+           Text("AP158")
+               .font(.title)
+               .background(.black)
+               .foregroundColor(.white)
+               .frame(width: 1000, height: 1000)
+               .position(x: 240, y: 330)
+         Rectangle()
+              .fill(.green)
+              .frame(width: 7, height: 6)
+              .position(x: 328.9, y: 106)
+       }
+    }
+    struct AP156: View{
+       var body: some View{
+           Text("AP156")
+               .font(.title)
+               .background(.black)
+               .foregroundColor(.white)
+               .frame(width: 1000, height: 1000)
+               .position(x: 240, y: 330)
+         Rectangle()
+              .fill(.green)
+              .frame(width: 7, height: 6)
+              .position(x: 328.9, y: 112)
+       }
+    }
+    struct AP154: View{
+       var body: some View{
+           Text("AP154")
+               .font(.title)
+               .background(.black)
+               .foregroundColor(.white)
+               .frame(width: 1000, height: 1000)
+               .position(x: 240, y: 330)
+         Rectangle()
+              .fill(.green)
+              .frame(width: 7, height: 6)
+              .position(x: 328.9, y: 118)
+       }
+    }
     struct AP2: View{
         var body: some View{
             Text("AP2")
@@ -604,8 +798,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 17, height: 3)
+                .position(x: 64.57, y: 152.5)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 27.2, height: 3)
+                .position(x: 95.7, y: 152.5)
         }
     }
     struct ED: View{
@@ -618,8 +816,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 17, height: 3)
+                .position(x: 64.57, y: 158.4)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 27.2, height: 3)
+                .position(x: 95.7, y: 158.4)
         }
     }
     struct EE: View{
@@ -632,22 +834,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
-        }
-    }
-    struct EF: View{
-        var body: some View{
-            Text("EF")
-                .font(.title)
-                .background(.black)
-                .foregroundColor(.white)
-                .frame(width: 1000, height: 1000)
-                .position(x: 240, y: 330)
+                .frame(width: 17, height: 3)
+                .position(x: 64.57, y: 169.5)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 27.2, height: 3)
+                .position(x: 95.7, y: 169.5)
         }
     }
     struct EG: View{
@@ -660,8 +852,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 17, height: 3)
+                .position(x: 64.57, y: 174.5)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 27.2, height: 3)
+                .position(x: 95.8, y: 174.5)
         }
     }
     struct EH: View{
@@ -674,8 +870,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 17, height: 4.2)
+                .position(x: 64.57, y: 180)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 27, height: 3.84)
+                .position(x: 95.9, y: 179.25)
         }
     }
     struct EI: View{
@@ -688,8 +888,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 15.5, height: 4.2)
+                .position(x: 63.8, y: 186)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 27, height: 3.84)
+                .position(x: 95.95, y: 185.3)
         }
     }
     struct EJ: View{
@@ -698,12 +902,16 @@ struct ContentView: View {
                 .font(.title)
                 .background(.black)
                 .foregroundColor(.white)
-                .frame(width: 1000, height: 1000)
+                .frame( width: 1000, height: 1000)
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 1.8, height: 19.5)
+                .position(x: 52, y: 179)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 1.8, height: 13)
+                .position(x: 52, y: 150.4)
         }
     }
     struct EK: View{
@@ -716,8 +924,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 14.1, height: 1.5)
+                .position(x: 63.1, y: 190.8)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 27.1, height: 1.7)
+                .position(x: 95.98, y: 191)
         }
     }
     struct FA: View{
@@ -730,8 +942,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 1.8, height: 19.5)
+                .position(x: 52, y: 179)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 1.8, height: 13)
+                .position(x: 52, y: 150.4)
         }
     }
     struct FB: View{
@@ -842,8 +1058,16 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 20, height: 1.5)
+                .position(x: 63.1, y: 138.5)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 21.5, height: 1.2)
+                .position(x: 63.8, y: 136)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 31, height: 1.1)
+                .position(x: 96.4, y: 136)
         }
     }
     struct RB: View{
@@ -856,8 +1080,20 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 21.5, height: 1.2)
+                .position(x: 63.8, y: 131.6)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 31, height: 1.1)
+                .position(x: 96.4, y: 131.65)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 21.5, height: 1.2)
+                .position(x: 63.8, y: 134.4)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 31, height: 1.1)
+                .position(x: 96.4, y: 134.4)
         }
     }
     struct RC: View{
@@ -870,8 +1106,20 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 21.5, height: 1)
+                .position(x: 63.8, y: 128)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 31, height: 1)
+                .position(x: 96.4, y: 128)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 21.5, height: 1)
+                .position(x: 63.8, y: 130)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 31, height: 1)
+                .position(x: 96.4, y: 130)
         }
     }
     struct RD: View{
@@ -884,8 +1132,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 31, height: 1)
+                .position(x: 96.4, y: 124)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 31, height: 1)
+                .position(x: 96.4, y: 126.8)
         }
     }
     struct RE: View{
@@ -898,8 +1150,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 31, height: 1)
+                .position(x: 96.4, y: 120.5)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 31, height: 1)
+                .position(x: 96.4, y: 122.7)
         }
     }
     struct RF: View{
@@ -912,8 +1168,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 31, height: 1)
+                .position(x: 96.4, y: 116.5)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 31, height: 1)
+                .position(x: 96.4, y: 118.9)
         }
     }
     struct RG: View{
@@ -926,8 +1186,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 31, height: 1)
+                .position(x: 96.4, y: 108)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 31, height: 1)
+                .position(x: 96.4, y: 115)
         }
     }
     struct TG1: View{
@@ -940,8 +1204,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 21.5, height: 1.3)
+                .position(x: 63.8, y: 124.3)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 21.5, height: 1.1)
+                .position(x: 63.8, y: 126.7)
         }
     }
     struct TG2: View{
@@ -954,8 +1222,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 21.5, height: 1.3)
+                .position(x: 63.8, y: 120.4)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 21.5, height: 1.1)
+                .position(x: 63.8, y: 123)
         }
     }
     struct TG3: View{
@@ -968,8 +1240,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 13, height: 1.2)
+                .position(x: 68.1, y: 116.4)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 21.5, height: 1.1)
+                .position(x: 63.8, y: 119)
         }
     }
     struct TG4: View{
@@ -982,8 +1258,8 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 13, height: 1.2)
+                .position(x: 68.1, y: 115.4)
         }
     }
     struct TL: View{
@@ -996,8 +1272,8 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 13, height: 1.2)
+                .position(x: 68.1, y: 107.9)
         }
     }
     struct TK: View{
@@ -1010,8 +1286,20 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 11.2, height: 1)
+                .position(x: 68.9, y: 103.4)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 15, height: 2)
+                .position(x: 70.9, y: 100.6)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 15, height: 6.3)
+                .position(x: 93.5, y: 94.6)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 20.5, height: 1)
+                .position(x: 98, y: 100)
         }
     }
     struct TM: View{
@@ -1024,8 +1312,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 13, height: 1.2)
+                .position(x: 68.1, y: 106.5)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 11.2, height: 1)
+                .position(x: 69, y: 104.8)
         }
     }
     struct TJ1: View{
@@ -1038,8 +1330,8 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 31, height: 1)
+                .position(x: 96.4, y: 106.4)
         }
     }
     struct TJ2: View{
@@ -1052,8 +1344,8 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 20.5, height: 1)
+                .position(x: 98, y: 104.8)
         }
     }
     struct TJ3: View{
@@ -1066,8 +1358,12 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 20.5, height: 1)
+                .position(x: 98, y: 103.5)
+            Rectangle()
+                .fill(.green)
+                .frame(width: 20.5, height: 1)
+                .position(x: 98, y: 101.5)
         }
     }
     struct ONER: View{
@@ -1080,8 +1376,8 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 4, height: 1.2)
+                .position(x: 55, y: 136)
         }
     }
     struct TWOR: View{
@@ -1094,8 +1390,8 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 4, height: 1.2)
+                .position(x: 55, y: 134.3)
         }
     }
     struct THREER: View{
@@ -1108,8 +1404,8 @@ struct ContentView: View {
                 .position(x: 240, y: 330)
             Rectangle()
                 .fill(.green)
-                .frame(width: 100, height: 100)
-                .position(x: 200, y: 200)
+                .frame(width: 4, height: 1.2)
+                .position(x: 55, y: 128)
         }
     }
     struct E4: View{
