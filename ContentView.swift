@@ -11,7 +11,6 @@ struct ContentView: View {
     
     private var listOfBins = binList
     @State var searchText = ""
-    @State var tapText = ""
     
     var body: some View {
         // MAP
@@ -24,336 +23,135 @@ struct ContentView: View {
                         .overlay(ZStack {
 
                             // AP
+                            if (searchText.prefix(3) == "AP1") { AP1() }
                             
-                            if (searchText == "Hello World")
-                            {
-                                Text("Hello Commoner")
-                                    .font(.title)
-                                    .background(.black)
-                                    .foregroundColor(.white)
-                                    .frame(width: 1000, height: 1000)
-                                    .position(x: 240, y: 330)
-                            }
+                            else if (searchText.prefix(3) == "AP2") { AP2() }
                             
-                            else if (tapText.prefix(3) == "AP1" || searchText.prefix(3) == "AP1") {
-                                if (tapText.prefix(5) == "AP158" || searchText.prefix(5) == "AP158") {
-                                    AP158()
-                                }
-                                //AP1()
-                            }
+                            else if (searchText.prefix(3) == "AP3") { AP3() }
                             
-                            else if (tapText.prefix(5) == "AP156" || searchText.prefix(5) == "AP156") {
-                                AP156()
-                            }
+                            else if (searchText.prefix(3) == "AP4") { AP4() }
                             
-                            else if (tapText.prefix(5) == "AP154" || searchText.prefix(5) == "AP154") {
-                                AP154()
-                            }
+                            else if (searchText.prefix(3) == "AP5") { AP5() }
                             
-                            else if (tapText.prefix(3) == "AP2") {
-                                AP2()
-                                
-                            }
-                            
-                            else if (tapText.prefix(3) == "AP3" || searchText.prefix(3) == "AP3") {
-                                AP3()
-                                
-                            }
-                            
-                            else if (tapText.prefix(3) == "AP4" || searchText.prefix(3) == "AP4") {
-                                AP4()
-                                
-                            }
-                            
-                            else if (tapText.prefix(3) == "AP5" || searchText.prefix(3) == "AP5") {
-                                AP5()
-                                
-                            }
-                            
-                            else if (tapText.prefix(3) == "AP8" || searchText.prefix(3) == "AP8") {
-                                AP8()
-                                
-                            }
+                            else if (searchText.prefix(3) == "AP8") { AP8() }
                             
                             // BP
-                            else if (tapText.prefix(3) == "BP2" || searchText.prefix(3) == "BP2") {
-                                BP2()
-                                
-                            }
+                            else if (searchText.prefix(3) == "BP2") { BP2() }
                             
-                            else if (tapText.prefix(3) == "BP3" || searchText.prefix(3) == "BP3") {
-                                BP3()
-                                
-                            }
+                            else if (searchText.prefix(3) == "BP3") { BP3() }
                             
-                            else if (tapText.prefix(3) == "BP4" || searchText.prefix(3) == "BP4") {
-                                BP4()
-                                
-                            }
+                            else if (searchText.prefix(3) == "BP4") { BP4() }
                             
                             // CP
-                            else if (tapText.prefix(3) == "CP3" || searchText.prefix(3) == "CP3") {
-                                CP3()
-                                
-                            }
+                            else if (searchText.prefix(3) == "CP3") { CP3() }
                             
-                            else if (tapText.prefix(3) == "CP4" || searchText.prefix(3) == "CP4") {
-                                CP4()
-                                
-                            }
+                            else if (searchText.prefix(3) == "CP4") { CP4() }
                             
-                            else if (tapText.prefix(3) == "CP6" || searchText.prefix(3) == "CP6") {
-                                CP6()
-                                
-                            }
+                            else if (searchText.prefix(3) == "CP6") { CP6() }
                             
                             // TY
-                            else if (tapText.prefix(3) == "TY1" || searchText.prefix(3) == "TY1") {
-                                TY1()
-                                
-                            }
+                            else if (searchText.prefix(3) == "TY1") {  TY1() }
                             
-                            else if (tapText.prefix(3) == "TY2" || searchText.prefix(3) == "TY2") {
-                                TY2()
-                                
-                            }
+                            else if (searchText.prefix(3) == "TY2") { TY2() }
                             
-                            else if (tapText.prefix(3) == "TY3" || searchText.prefix(3) == "TY3") {
-                                TY3()
-                                
-                            }
+                            else if (searchText.prefix(3) == "TY3") { TY3() }
                             
-                            else if (tapText.prefix(3) == "TY4" || searchText.prefix(3) == "TY4") {
-                                TY4()
-                                
-                            }
+                            else if (searchText.prefix(3) == "TY4") { TY4() }
                             
                             // E
-                            else if (tapText.prefix(2) == "EA" || searchText.prefix(2) == "EA") {
-                                EA()
-                                
-                            }
+                            else if (searchText.prefix(2) == "EA") { EA() }
                             
-                            else if (tapText.prefix(2) == "EB" || searchText.prefix(2) == "EB") {
-                                EB()
-                                
-                            }
+                            else if (searchText.prefix(2) == "EB") { EB() }
                             
-                            else if (tapText.prefix(2) == "EC" || searchText.prefix(2) == "EC") {
-                                EC()
-                                
-                            }
+                            else if (searchText.prefix(2) == "EC") { EC() }
                             
-                            else if (tapText.prefix(2) == "ED" || searchText.prefix(2) == "ED") {
-                                ED()
-                                
-                            }
+                            else if (searchText.prefix(2) == "ED") { ED() }
                             
-                            else if (tapText.prefix(2) == "EE" || searchText.prefix(2) == "EE") {
-                                EE()
-                                
-                            }
+                            else if (searchText.prefix(2) == "EE") { EE() }
                             
-                            else if (tapText.prefix(2) == "EG" || searchText.prefix(2) == "EG") {
-                                EG()
-                                
-                            }
+                            else if (searchText.prefix(2) == "EG") {  EG() }
                             
-                            else if (tapText.prefix(2) == "EH" || searchText.prefix(2) == "EH") {
-                                EH()
-                                
-                            }
+                            else if (searchText.prefix(2) == "EH") { EH() }
                             
-                            else if (tapText.prefix(2) == "EI" || searchText.prefix(2) == "EI") {
-                                EI()
-                                
-                            }
+                            else if (searchText.prefix(2) == "EI") { EI() }
                             
-                            else if (tapText.prefix(2) == "EJ" || searchText.prefix(2) == "EJ") {
-                                EJ()
-                                
-                            }
+                            else if (searchText.prefix(2) == "EJ") { EJ() }
                             
-                            else if (tapText.prefix(2) == "EK" || searchText.prefix(2) == "EK") {
-                                EK()
-                                
-                            }
+                            else if (searchText.prefix(2) == "EK") { EK() }
                             
                             // F
                             
-                            else if (tapText.prefix(2) == "FA" || searchText.prefix(2) == "FA") {
-                                FA()
-                                
-                            }
+                            else if (searchText.prefix(2) == "FA") { FA() }
                             
-                            else if (tapText.prefix(2) == "FB" || searchText.prefix(2) == "FB") {
-                                FB()
-                                
-                            }
+                            else if (searchText.prefix(2) == "FB") { FB() }
                             
-                            else if (tapText.prefix(2) == "FC" || searchText.prefix(2) == "FC") {
-                                FC()
-                                
-                            }
+                            else if (searchText.prefix(2) == "FC") { FC() }
                             
-                            else if (tapText.prefix(2) == "FD" || searchText.prefix(2) == "FD") {
-                                FD()
-                                
-                            }
+                            else if (searchText.prefix(2) == "FD") { FD() }
                             
-                            else if (tapText.prefix(2) == "FE" || searchText.prefix(2) == "FE") {
-                                FE()
-                                
-                            }
+                            else if (searchText.prefix(2) == "FE") { FE() }
                             
-                            else if (tapText.prefix(2) == "FF" || searchText.prefix(2) == "FF") {
-                                FF()
-                                
-                            }
+                            else if (searchText.prefix(2) == "FF") { FF() }
                             
-                            else if (tapText.prefix(2) == "FG" || searchText.prefix(2) == "FG") {
-                                FG()
-                                
-                            }
+                            else if (searchText.prefix(2) == "FG") { FG() }
                             
-                            else if (tapText.prefix(2) == "FH" || searchText.prefix(2) == "FH") {
-                                FH()
-                                
-                            }
+                            else if (searchText.prefix(2) == "FH") { FH() }
                             
                             // R, TG, TL, TM, TJ, _R (REPACK)
                             
-                            else if (tapText.prefix(2) == "RA" || searchText.prefix(2) == "RA") {
-                                RA()
-                                
-                            }
+                            else if (searchText.prefix(2) == "RA") { RA() }
                             
-                            else if (tapText.prefix(2) == "RB" || searchText.prefix(2) == "RB") {
-                                RB()
-                                
-                            }
+                            else if (searchText.prefix(2) == "RB") { RB() }
                             
-                            else if (tapText.prefix(2) == "RC" || searchText.prefix(2) == "RC") {
-                                RC()
-                                
-                            }
+                            else if (searchText.prefix(2) == "RC") { RC() }
                             
-                            else if (tapText.prefix(2) == "RD" || searchText.prefix(2) == "RD") {
-                                RD()
-                                
-                            }
+                            else if (searchText.prefix(2) == "RD") { RD() }
                             
-                            else if (tapText.prefix(2) == "RE" || searchText.prefix(2) == "RE") {
-                                RE()
-                                
-                            }
+                            else if (searchText.prefix(2) == "RE") { RE() }
                             
-                            else if (tapText.prefix(2) == "RF" || searchText.prefix(2) == "RF") {
-                                RF()
-                                
-                            }
+                            else if (searchText.prefix(2) == "RF") { RF() }
                             
-                            else if (tapText.prefix(2) == "RG" || searchText.prefix(2) == "RG") {
-                                RG()
-                                
-                            }
+                            else if (searchText.prefix(2) == "RG") { RG() }
                             
-                            else if (tapText.prefix(3) == "TG1" || searchText.prefix(3) == "TG1") {
-                                TG1()
-                                
-                            }
+                            else if (searchText.prefix(3) == "TG1") { TG1() }
                             
-                            else if (tapText.prefix(3) == "TG2" || searchText.prefix(3) == "TG2") {
-                                TG2()
-                                
-                            }
+                            else if (searchText.prefix(3) == "TG2") { TG2() }
                             
-                            else if (tapText.prefix(3) == "TG3" || searchText.prefix(3) == "TG3") {
-                                TG3()
-                                
-                            }
+                            else if (searchText.prefix(3) == "TG3") {  TG3() }
                             
-                            else if (tapText.prefix(3) == "TG4" || searchText.prefix(3) == "TG4") {
-                                TG4()
-                                
-                            }
+                            else if (searchText.prefix(3) == "TG4") { TG4() }
                             
-                            else if (tapText.prefix(2) == "TL" || searchText.prefix(2) == "TL") {
-                                TL()
-                                
-                            }
+                            else if (searchText.prefix(2) == "TL") { TL() }
                             
-                            else if (tapText.prefix(2) == "TM" || searchText.prefix(2) == "TM") {
-                                TM()
-                                
-                            }
+                            else if (searchText.prefix(2) == "TM") { TM() }
                             
-                            else if (tapText.prefix(2) == "TK" || searchText.prefix(2) == "TK") {
-                                TK()
-                                
-                            }
+                            else if (searchText.prefix(2) == "TK") { TK() }
                             
-                            else if (tapText.prefix(3) == "TJ1" || searchText.prefix(3) == "TJ1") {
-                                TJ1()
-                                
-                            }
+                            else if (searchText.prefix(3) == "TJ1") { TJ1() }
                             
-                            else if (tapText.prefix(3) == "TJ2" || searchText.prefix(3) == "TJ2") {
-                                TJ2()
-                                
-                            }
+                            else if (searchText.prefix(3) == "TJ2") { TJ2() }
                             
-                            else if (tapText.prefix(3) == "TJ3" || searchText.prefix(3) == "TJ3") {
-                                TJ3()
-                                
-                            }
+                            else if (searchText.prefix(3) == "TJ3") { TJ3() }
                             
-                            else if (tapText.prefix(2) == "1R" || searchText.prefix(2) == "1R") {
-                                ONER()
-                                
-                            }
+                            else if (searchText.prefix(2) == "1R") { ONER() }
                             
-                            else if (tapText.prefix(2) == "2R" || searchText.prefix(2) == "2R") {
-                                TWOR()
-                                
-                            }
+                            else if (searchText.prefix(2) == "2R") { TWOR() }
                             
-                            else if (tapText.prefix(2) == "3R" || searchText.prefix(2) == "3R") {
-                                THREER()
-                                
-                            }
+                            else if (searchText.prefix(2) == "3R") { THREER() }
                             
                             // OTHERS
                             
-                            else if (tapText.prefix(2) == "LA" || searchText.prefix(2) == "LA") {
-                                LA()
-                                
-                            }
+                            else if (searchText.prefix(2) == "LA") { LA() }
                             
-                            else if (tapText.prefix(2) == "YA" || searchText.prefix(2) == "YA") {
-                                YA()
-                                
-                            }
+                            else if (searchText.prefix(2) == "YA") { YA() }
                             
-                            else if (tapText.prefix(2) == "E4" || searchText.prefix(2) == "E4") {
-                                E4()
-                                
-                            }
+                            else if (searchText.prefix(2) == "E4") { E4() }
                             
-                            else if (tapText.prefix(2) == "C4" || searchText.prefix(2) == "C4") {
-                                C4()
-                                
-                            }
+                            else if (searchText.prefix(2) == "C4") { C4() }
                             
-                            else if (tapText.prefix(2) == "CK" || searchText.prefix(2) == "CK") {
-                                CK()
-                                
-                            }
+                            else if (searchText.prefix(2) == "CK") { CK() }
                             
-                            else if (tapText.prefix(2) == "DL" || searchText.prefix(2) == "DL") {
-                                DL()
-                                
-                            }
+                            else if (searchText.prefix(2) == "DL") { DL() }
                             
                         }, alignment: .bottomTrailing)
                     Spacer()
@@ -371,13 +169,13 @@ struct ContentView: View {
                         Image(systemName: "shippingbox")
                             .foregroundColor(Color.blue)
                     }
+                    
                     .contentShape(Rectangle())
                     .frame(width: 300, height: 8)
                     .onTapGesture{
                         UIApplication.shared.endEditing()
-                        tapText = bin
+                        searchText = bin
                     }
-                    //tapText = nil
                     .padding()
                 }
             }
