@@ -169,17 +169,18 @@ struct ContentView: View {
                         Image(systemName: "shippingbox")
                             .foregroundColor(Color.blue)
                     }
-                    
                     .contentShape(Rectangle())
-                    .frame(width: 300, height: 8)
+                    .frame(width: 300, height: 30)
                     .onTapGesture{
                         UIApplication.shared.endEditing()
                         searchText = bin
+                        
                     }
                     .padding()
+
                 }
             }
-            .searchable(text: $searchText)
+            .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always))
             .navigationTitle("Bin Locator")
         }
     }
@@ -1304,7 +1305,6 @@ struct ContentView: View {
                 .position(x: 200, y: 200)
         }
     }
-    
     
     // DISPLAY LIST OF BINS AND SEARCH BAR
     var bins: [String] {
